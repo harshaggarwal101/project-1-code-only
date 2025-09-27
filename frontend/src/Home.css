@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
+body, .home {
+  margin: 0;
+  padding: 0;
+  font-family: 'inter','Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  color: #f0f6fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #e5eaef;
+  margin-top: 60px;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+
+.shiny-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+
+
+h2 {
+  color: #f0f6fc;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+p {
+  color: #8b949e;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+input {
+  padding: 12px 18px;
+  margin: 25px 0 15px;
+  width: 320px;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  transition: border 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+
+button {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+  background-color: #ff6b6d;
+}
+
+.samples {
+  margin-top: 50px;
+  color: #aaa;
+}
+
+.samples button {
+  margin: 0 5px;
+  background: none;
+  color: #00ccff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.samples button:hover {
+  border-color: #58a6ff;
+  transform: scale(1.1);
+}
+
+
+.error {
+  color: #ff7b72;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+
+.results-container {
+  text-align: center;
+  color: #e5e5e5;
+  margin-top: 30px;
+}
+
+/* Header text */
+.results-url {
+  font-size: 1.3rem;
+  font-weight: 600;
+  word-break: break-word;
+  max-width: 80%;
+  margin: 0 auto 20px;
+}
+
+
+.violation {
+  margin: 20px 0;
+  padding: 16px;
+  border-left: 4px solid #f85149;
+  background-color: #0d1117;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.violation h3 {
+  color: #58a6ff;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.violation p {
+  font-size: 0.95rem;
+  color: #adbac7;
+  margin-bottom: 6px;
+}
+
+.violation a {
+  color: #3fb950;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.violation a:hover {
+  text-decoration: underline;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .shiny-heading { font-size: 1.8rem; }
+  .description  { font-size: 1rem;  }
+  button        { width: 80%; }
+}
+
+
+
+.results {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+
+.violation {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;     
+  left: 0;
+  width: 100%;  
+  margin: 0;    
+}
