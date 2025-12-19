@@ -48,7 +48,7 @@ const Home = () => {
       {error && <div className='error'>{error}</div>}
 
       <footer>
-       <p className="footer">Made with ❤️ by Aditya</p>
+       <p className="footer">Made with ❤️ by harshaggarwal101</p>
       </footer>
     </div>
   )
